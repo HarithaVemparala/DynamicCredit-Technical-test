@@ -6,7 +6,21 @@
     {
         public static void SayHelloToTheWorld(string[] args)
         {
-            // Write a method body which makes the corresponding unit test in the 'TechnicalTestUnitTests' project pass
+            string str = "";
+
+            if (args == null || args.Length == 0)
+                args = new string[] { "Hello ", "World!" };
+
+            if (args != null && args.Length > 0)
+            {
+                foreach (string item in args)
+                {
+                    str += item;
+                }
+            }
+            Console.WriteLine((str));
+
+
         }
     }
 }

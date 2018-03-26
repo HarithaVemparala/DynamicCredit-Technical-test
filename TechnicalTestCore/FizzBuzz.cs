@@ -13,6 +13,23 @@
             // -- For every multiple of three print 'Fizz'
             // -- For every multiple of five print 'Buzz'
             // -- For every multiple of both three and five print 'FizzBuzz'
+
+            int imax = 0;
+
+            if (args != null && args.Length > 0)
+                imax = Convert.ToInt32(args[0]);
+
+            for (int i = 1; i <= imax; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                    Console.WriteLine("FizzBuzz");
+                else if (i % 3 == 0)
+                    Console.WriteLine("Fizz");
+                else if (i % 5 == 0)
+                    Console.WriteLine("Buzz");
+                else
+                    Console.WriteLine(i.ToString()); 
+            } 
         }
     }
 }
